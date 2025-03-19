@@ -1,4 +1,4 @@
-#Bank Churn Customer Analysis
+## Bank Churn Customer Analysis
 
 ## 📌 Project Overview
 This project focuses on **data cleaning, exploratory data analysis (EDA), and machine learning classification** to predict customer churn for a bank. The goal is to analyze customer data, identify key patterns, and build predictive models to help the bank reduce churn and improve customer retention.
