@@ -1,0 +1,39 @@
+|||  Predicting Fuel Economy  |||
+
+Build a linear regression model to predict a vehicle's fuel efficiency.
+
+Objective 1
+Prepare and Explore the Data
+Your first objective is to prepare the data for modelling, explore the target ('mpg') and other features in the dataset, and fix any issues you encounter.
+
+Task:
+Read in the auto-mpg.csv dataset, and check datatypes and columns for missing or unusual values.
+Convert ‘origin’ to a categorical feature.
+Calculate summary statistics for each of the numeric columns in the dataset including min, max and mean, then build a histogram of the target variable (‘mpg’).
+Explore relationships between the features and the ‘mpg’ column, and use scatterplots and build a correlation heatmap. Which column is most strongly correlated with ‘mpg’?
+
+Objective 2
+Split the data and build a multiple regression model
+Your second objective is to split the data into training and test data, then fit a multiple regression model using the validation scheme of your choice. Perform feature engineering and variable selection, and check whether any assumptions are violated.
+
+Task:
+Split the data into train and test, then then set up a validation scheme of your choice.
+Fit a baseline regression model using the feature with the strongest correlation to the target (‘mpg’).
+Fit a multiple regression model. Perform any feature selection and feature engineering necessary, fixing any violated assumptions along the way.
+
+
+Objective 3
+Evaluate model test performance and interpret the model
+Score your model on the test data set, use your model to predict a new batch of cars, and interpret your model results.
+
+Task:
+Score your final model on the test set, calculating both R2 and MAE. If your test R2 is less than 8, revisit the modelling process
+Interpret your model. What impact does a one-year increase in model year have on the predicted mileage?.
+BONUS: Repeat the modelling process using ridge regression. How much better was the ridge model than traditional regression, if at all?
+
+Final Step
+Final Project Question
+Answer the following question to validate your completed project.
+
+What is the correlation between a car's 'weight' and 'mpg'?
+
