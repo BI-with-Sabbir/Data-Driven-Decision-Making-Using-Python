@@ -1,9 +1,9 @@
-## **A/B Testing in Python: SEO/Digital Marketing Campaign Analysis**
+## **📊A/B Testing in Python: SEO/Digital Marketing Campaign Analysis**
 
-## **Project Overview**
+## **📌Project Overview**
 A/B testing is a statistical method used to compare two different groups and determine whether there is a significant difference between them. In this project, we analyze the performance metrics of two different SEO/Digital Marketing campaigns to identify which strategy is more effective.
 
-## **Project Goal**
+## **🎯Project Goal**
 The goal of this project is to evaluate the effectiveness of two different marketing campaigns (Group A and Group B) based on four key performance indicators (KPIs):
 - **Impression**: Number of times the advertisement was viewed.
 - **Click**: Number of times the advertisement was clicked.
@@ -12,7 +12,7 @@ The goal of this project is to evaluate the effectiveness of two different marke
 
 Using statistical hypothesis testing, we aim to determine if the differences in these metrics between the two campaigns are statistically significant.
 
-## **Implementation Steps**
+## **⚙️Implementation Steps**
 The following steps outline the methodology used to perform A/B testing:
 
 ### **Step 1: Importing the Dataset**
@@ -49,6 +49,30 @@ The following steps outline the methodology used to perform A/B testing:
 - As a result, the **Mann-Whitney U Test** was performed.
 - The results showed a **statistically significant difference** (p < 0.05) in conversion rates between Group A and Group B.
 - **Group B had a higher median conversion rate** compared to Group A, indicating a more effective campaign.
+
+  📈 Results & Key Findings
+
+🔍 Statistical Analysis Outcomes
+
+- Control Group Conversion Rate: X%
+
+- Treatment Group Conversion Rate: Y%
+
+- Z-score: Z-value
+
+- P-value: P-value
+
+- Conclusion: [Accept/Reject] Null Hypothesis
+
+🔥 Business Recommendations
+
+If the new variant significantly increases conversions, consider rolling it out.
+
+If no improvement is observed, refine the strategy or explore alternative optimizations.
+
+Segment analysis may provide further insights into user behavior differences.
+
+
 
 ## **Real-World Applications**
 A/B testing is widely used in various domains to optimize business decisions. Some real-world applications include:
