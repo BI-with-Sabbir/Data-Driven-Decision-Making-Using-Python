@@ -1,4 +1,4 @@
-**## A/B Testing in Python: SEO/Digital Marketing Campaign Analysis**
+## **A/B Testing in Python: SEO/Digital Marketing Campaign Analysis**
 
 ## **Project Overview**
 A/B testing is a statistical method used to compare two different groups and determine whether there is a significant difference between them. In this project, we analyze the performance metrics of two different SEO/Digital Marketing campaigns to identify which strategy is more effective.
