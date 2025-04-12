@@ -20,6 +20,10 @@ This notebook is the **second part of a beginner-friendly Python series** design
 
 ## 📘 Key Concepts Explained
 
+![image](https://github.com/user-attachments/assets/8cbcef7c-855f-40e7-b3ce-58bd109a6497)
+
+![image](https://github.com/user-attachments/assets/def56514-606d-4759-bab2-0b5f64d60a87)
+
 ### 🔹 Variables and Assignments
 Learn how to create, overwrite, and name variables effectively.
 
@@ -46,6 +50,8 @@ num_int = int(num_str)  # Converts string to integer
 ```
 
 ### 🔹 Arithmetic & Comparison Operators
+![image](https://github.com/user-attachments/assets/e8d0fc3e-e00f-46b5-b7e6-1abec3fd3b64)
+
 Master operations like `+`, `-`, `*`, `/`, and comparisons like `>`, `<`, `==`, `!=`.
 
 ```python
@@ -118,17 +124,6 @@ This is part of a larger series. Stay tuned for:
 - Part 5: Working with Libraries (NumPy, Pandas)
 
 ---
-
-## 👨‍💻 Author
-
-**Tanim**  
-- 📍 Undergraduate in Statistics  
-- 📊 Aspiring Data Scientist & Researcher  
-- 📬 [Reach Me](mailto:your-email@example.com) | 🌐 [LinkedIn](https://linkedin.com/in/yourprofile)
-
----
-
-## ⭐ GitHub Tagline Suggestion
 
 > _"Helping learners and professionals understand Python, one notebook at a time."_
 
