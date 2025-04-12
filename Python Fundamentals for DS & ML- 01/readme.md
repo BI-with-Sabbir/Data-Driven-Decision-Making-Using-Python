@@ -1,6 +1,6 @@
 ## 📘 Session Overview
 
-This is the first notebook in a foundational series aimed at building core Python skills necessary for data analysis, machine learning, and statistical computing.
+This is the first notebook in a foundational series aimed at building core Python skills necessary for data analysis, machine learning, and statistical computing. [click here](www.google.com)
 
 ### 🧠 Topics Covered
 
