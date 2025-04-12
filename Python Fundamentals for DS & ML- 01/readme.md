@@ -6,7 +6,7 @@ This Jupyter Notebook provides a beginner-friendly introduction to Python progra
 
 ## 📘 Session Overview
 
-This is the first notebook in a foundational series aimed at building core Python skills necessary for data analysis, machine learning, and statistical computing. [click here](www.google.com)
+This is the first notebook in a foundational series aimed at building core Python skills necessary for data analysis, machine learning, and statistical computing. [click here] (https://github.com/BI-with-Sabbir/Data-Driven-Decision-Making-Using-Python/blob/main/Python%20Fundamentals%20for%20DS%20%26%20ML-%2001/Python%20Fundamentals%20for%20DS%20%26%20ML-%2001%20(1).pdf)
 
 ### 🧠 Topics Covered
 
