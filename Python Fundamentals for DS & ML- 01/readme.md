@@ -44,9 +44,69 @@ print(greeting)
 is_student = True
 if is_student:
     print("Student detected!")
+
+# Example: Lists
+
+fruits = ["apple", "banana", "cherry"]
+fruits.append("orange")  # Add an item using the "append" Method
+print("Fruits:", fruits)
+print("First fruit:", fruits[1])  # Access by index
+
+# Example: Tuples
+
+coordinates = (10.0, 20.0)
+print("Coordinates:", coordinates)
+print("X-coordinate:", coordinates[0])
+
+# prompt: Create a dictionary with Keys: Customer Name, Number of Items Purchased, Age
+# Add Multiple values under each key
+
+customer_data = {
+    'Customer Name': ['Alice', 'Bob', 'Charlie', 'David'],
+    'Number of Items Purchased': [5, 2, 8, 3],
+    'Age': [25, 30, 22, 40]
+}
+
+# prompt: Convert the customer_data list as dataframe
+
+import pandas as pd
+
+customer_data = {
+    'Customer Name': ['Alice', 'Bob', 'Charlie', 'David'],
+    'Number of Items Purchased': [5, 2, 8, 3],
+    'Age': [25, 30, 22, 40]
+}
+
+customer_df = pd.DataFrame(customer_data)
+customer_df
+
+# Example: Dictionaries
+
+person = {"name": "Nayeem",
+          "age": 25,
+          "is_student": True}
+print("Person:", person)
+print("Name:", person["name"])  # Access by key
+person["age"] = 26  # Update value
+print("Person:", person)
 ```
 
 ---
+
+### Dictionaries Methode:
+![image](https://github.com/user-attachments/assets/98972532-4507-4e64-85f0-4e8c0f382e79)
+
+### Nested Dictionaries Method:
+![image](https://github.com/user-attachments/assets/8c524a76-f463-4a0d-823f-4d8bd49f65c7)
+
+### Set operations:
+![image](https://github.com/user-attachments/assets/8b6835a4-c4a0-4e57-a7b9-a103fd36522e)
+
+### List & Tuple 
+![image](https://github.com/user-attachments/assets/075d3dfa-9d27-4bf9-87f8-43d9a4681f69)
+
+
+
 
 ## 📚 Prerequisites
 
