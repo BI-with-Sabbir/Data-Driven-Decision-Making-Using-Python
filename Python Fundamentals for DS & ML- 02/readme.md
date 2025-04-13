@@ -1,4 +1,4 @@
-# 🐍 Python Fundamentals for Data Science & Machine Learning — Part 2
+# Python Fundamentals for Data Science & Machine Learning — Part 2
 
 This notebook is the **second part of a beginner-friendly Python series** designed for those aiming to build a strong foundation in Python before diving into Data Science and Machine Learning. It’s perfect for aspiring data analysts, machine learning practitioners, or trainers looking for structured teaching content.
 
