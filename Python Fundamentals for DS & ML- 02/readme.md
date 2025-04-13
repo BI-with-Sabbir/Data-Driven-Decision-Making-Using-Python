@@ -1,6 +1,6 @@
 # Python Fundamentals for Data Science & Machine Learning — Part 2
 
-This notebook is the **second part of a beginner-friendly Python series** designed for those aiming to build a strong foundation in Python before diving into Data Science and Machine Learning. It’s perfect for aspiring data analysts, machine learning practitioners, or trainers looking for structured teaching content.
+This notebook is the **second part of a beginner-friendly Python series** designed for those aiming to build a strong foundation in Python before diving into Data Science and Machine Learning. It’s perfect for aspiring data analysts, machine learning practitioners, or trainers looking for structured teaching content. [Click Here for More details](https://github.com/BI-with-Sabbir/Data-Driven-Decision-Making-Using-Python/blob/main/Python%20Fundamentals%20for%20DS%20%26%20ML-%2002/Python%20Fundamentals%20for%20DS%20%26%20ML-%2002.ipynb)
 
 ---
 
