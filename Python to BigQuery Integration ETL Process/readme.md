@@ -1,107 +1,121 @@
-# Python to BigQuery ETL Pipeline Project
+# E-commerce Superstore Data Analysis with BigQuery & Python
 
-## 📅 Project Overview
-This project demonstrates a complete **ETL (Extract, Transform, Load)** pipeline using Python, Google Sheets, and Google BigQuery. It includes data extraction from Google Sheets, data cleaning and transformation in Python, and loading the consolidated data into BigQuery for further analysis. A stored procedure is also created in BigQuery to remove records with negative profit.
+## 📌 Project Overview
+This project showcases a complete data workflow for an E-commerce Superstore dataset using **Google Sheets**, **Python (Pandas)**, and **Google BigQuery**. The goal is to demonstrate how a data scientist can:
 
----
-
-## 💰 Data Sources
-All data is retrieved directly from a shared **Google Spreadsheet**, which includes multiple sheets:
-
-| Sheet Name | Description | CSV Link |
-|------------|-------------|----------|
-| Orders     | Contains sales transaction records | [Orders CSV](https://docs.google.com/spreadsheets/d/1M0u00wa4A6CqTA8xImd90nDtF86OwhR2ESgQjUItfaY/export?format=csv&gid=1531479241) |
-| Customers  | Maps Customer IDs to Names | [Customers CSV](https://docs.google.com/spreadsheets/d/1M0u00wa4A6CqTA8xImd90nDtF86OwhR2ESgQjUItfaY/export?format=csv&gid=2099175586) |
-| Returns    | Indicates which orders were returned | [Returns CSV](https://docs.google.com/spreadsheets/d/1M0u00wa4A6CqTA8xImd90nDtF86OwhR2ESgQjUItfaY/export?format=csv&gid=1158708900) |
-| Users      | Associates regions with sales managers | [Users CSV](https://docs.google.com/spreadsheets/d/1M0u00wa4A6CqTA8xImd90nDtF86OwhR2ESgQjUItfaY/export?format=csv&gid=531959115) |
+- Read data directly from Google Sheets
+- Perform data cleaning and exploratory analysis
+- Merge multiple datasets into a consolidated view
+- Store the processed data in BigQuery
+- Query and visualize data using SQL and Python
 
 ---
 
-## 🌐 Tech Stack
-- **Python**: `pandas`, `numpy`, `matplotlib`, `seaborn`
-- **Google BigQuery**: for storing and querying consolidated data
-- **Google Sheets**: for initial data source
+## 🧰 Tools & Libraries Used
+- **Google Sheets** (as data source)
+- **Python (Pandas, NumPy)** for EDA and data transformation
+- **Google BigQuery** for storing and querying large-scale datasets
+- **Google Colab** for cloud-based execution
 
 ---
 
-## 📊 ETL Steps
+## 🔗 Data Sources (Google Sheets as CSV)
+The following Google Sheets were used and converted to CSV links:
 
-### ✂️ Extract
-- Data is fetched directly using `pandas.read_csv()` with a converted CSV export link from Google Sheets.
+- **Orders**  
+  `https://docs.google.com/spreadsheets/d/1M0u00wa4A6CqTA8xImd90nDtF86OwhR2ESgQjUItfaY/export?format=csv&gid=1531479241`
 
-### ⚖️ Transform
-- Data type conversions (e.g., dates, postal codes)
-- Cleaning missing or incorrect values
-- Joining multiple sheets:
-  - Orders ➔ Customers
-  - Orders ➔ Users
-  - Orders ➔ Returns
-- Statistical summaries using `.describe()` and `.info()`
+- **Customers**  
+  `https://docs.google.com/spreadsheets/d/1M0u00wa4A6CqTA8xImd90nDtF86OwhR2ESgQjUItfaY/export?format=csv&gid=2099175586`
 
-### ↓ Load
-- The cleaned and consolidated data is pushed into **Google BigQuery** using `to_gbq()`.
+- **Returns**  
+  `https://docs.google.com/spreadsheets/d/1M0u00wa4A6CqTA8xImd90nDtF86OwhR2ESgQjUItfaY/export?format=csv&gid=1158708900`
+
+- **Users**  
+  `https://docs.google.com/spreadsheets/d/1M0u00wa4A6CqTA8xImd90nDtF86OwhR2ESgQjUItfaY/export?format=csv&gid=531959115`
+
+---
+
+## 📊 Exploratory Data Analysis (EDA)
+
+Initial inspection revealed many missing values in the `Status` column:
 
 ```python
-from pandas_gbq import to_gbq
+df_consolidated['Status'].value_counts(dropna=False)
+```
 
+**Output:**
+```
+NaN         9328
+Returned      98
+```
+
+Missing values were interpreted as "Order Not Returned" and filled accordingly:
+
+```python
+df_consolidated['Status'] = df_consolidated['Status'].fillna('Order Not Returned')
+```
+
+---
+
+## 🔄 Data Consolidation
+Multiple tables were joined using appropriate keys to create a denormalized structure ideal for analysis. Key operations included:
+- Merging `Orders` with `Customers` and `Returns`
+- Mapping user-level data from `Users` sheet
+
+---
+
+## ☁️ Storing Data into BigQuery
+
+The cleaned and consolidated dataset was written to a BigQuery table named `superstore_sales_denormalized_table` in the dataset `ecommerce_data`.
+
+```python
 df_consolidated.to_gbq(
-    destination_table='ecommerce_data.superstore_sales_denormalized_table',
+    'ecommerce_data.superstore_sales_denormalized_table',
     project_id='tutorial-data-441413',
     if_exists='replace'
 )
 ```
 
+> ⚠️ Note: `to_gbq()` is deprecated. Future projects should use `pandas_gbq.to_gbq()` instead.
+
 ---
 
-## 📊 BigQuery Stored Procedure
-A stored procedure was created to **remove rows where profit is negative**.
+## 📥 Reading Back from BigQuery
 
-### Stored Procedure:
-```sql
-CREATE OR REPLACE PROCEDURE `tutorial-data-441413.ecommerce_data.remove_negative_profits`(
-    IN table_name STRING
-)
-BEGIN
-  DELETE FROM `tutorial-data-441413.ecommerce_data.superstore_sales_denormalized_table`
-  WHERE Profit < 0;
-END;
-```
+Data can be retrieved back using SQL queries via Python:
 
-### Call Procedure from Python:
 ```python
-client.query("CALL `tutorial-data-441413.ecommerce_data.remove_negative_profits`('superstore_sales_denormalized_table')")
+QUERY = 'SELECT * FROM tutorial-data-441413.ecommerce_data.superstore_sales_denormalized_table LIMIT 100'
+query_job = client.query(QUERY)
+df = query_job.result().to_dataframe()
 ```
 
----
-
-## 🔄 Retrieve Data from BigQuery
-To read data back into Python:
-```python
-from google.cloud import bigquery
-
-client = bigquery.Client(project='tutorial-data-441413')
-query = """
-    SELECT * FROM `tutorial-data-441413.ecommerce_data.superstore_sales_denormalized_table`
-    LIMIT 100
-"""
-
-df = client.query(query).to_dataframe()
-```
+**Sample Output:**
+| Order ID | Product Category | Profit | Manager | Status             |
+|----------|------------------|--------|---------|--------------------|
+| 88525    | Office Supplies  | 1.32   | Chris   | Order Not Returned |
+| 88522    | Office Supplies  | 4.56   | William | Order Not Returned |
+| ...      | ...              | ...    | ...     | ...                |
 
 ---
 
-## 📑 Key Learnings
-- Seamless integration between Google Sheets and Python
-- Data transformation & type casting with Pandas
-- Working with Google BigQuery in Python
-- Creating and executing stored procedures from Python
+## ✅ Key Outcomes
+- ✅ Automated data ingestion from Google Sheets
+- ✅ Comprehensive data cleaning & transformation
+- ✅ Consolidated reporting table ready for BI
+- ✅ Storage and querying via BigQuery for scalability
 
 ---
 
-## 🏆 Final Output
-- Cleaned and merged dataset stored in BigQuery.
-- Ready for advanced analytics and dashboarding in tools like **Looker Studio**, **Power BI**, etc.
+## 📌 Next Steps
+- Add visualization dashboards using Looker Studio or Power BI
+- Build ML models (e.g., return prediction) using BigQuery ML or scikit-learn
+- Automate the data pipeline with Airflow or Cloud Functions
 
 ---
 
+## 🧠 Author
+**Tanim**  
+Data Analyst | BI Consultant | Python & SQL Enthusiast
 
