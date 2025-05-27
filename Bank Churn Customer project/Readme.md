@@ -32,35 +32,6 @@ Implemented classification models to predict customer churn:
 - Evaluated model performance using **accuracy, precision, recall, and F1-score**.
 - Provided actionable insights to reduce churn and retain customers.
 
-## ⚙️ Installation & Usage
-### Prerequisites
-Ensure you have Python and the required libraries installed:
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn xgboost
-```
-### Running the Project
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/bank-churn-analysis.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd bank-churn-analysis
-   ```
-3. Open the Jupyter Notebook:
-   ```bash
-   jupyter notebook "Bank Churn Customer- Data Cleaning, EDA & Classification.ipynb"
-   ```
-
-## 📜 File Structure
-```
-├── data/               # Raw & cleaned data
-├── notebooks/          # Jupyter Notebooks
-├── models/             # Trained models
-├── src/                # Python scripts
-├── README.md           # Project documentation
-├── requirements.txt    # Dependencies
-```
 
 ##📊 Key Insights for Decision-Making
 
