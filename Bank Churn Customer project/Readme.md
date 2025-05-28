@@ -12,7 +12,7 @@ The dataset consists of customer information, including demographics, account de
 - **Tenure, Number of Products**: Customer relationship with the bank
 - **Exited**: Target variable (1 = Churned, 0 = Retained)
 
-## EDA and Maching learning Model Used this Project: **[Click Here]**(http://localhost:8888/notebooks/Bank%20Churn%20Customer-%20Data%20Cleaning%2C%20EDA%20%26%20Classification.ipynb)
+## EDA and Maching learning Model Used this Project: [Click Here](http://localhost:8888/notebooks/Bank%20Churn%20Customer-%20Data%20Cleaning%2C%20EDA%20%26%20Classification.ipynb)
 
 ## 🛠️ Data Cleaning & EDA
 - **Handling Missing Values**: Checked and imputed missing values
