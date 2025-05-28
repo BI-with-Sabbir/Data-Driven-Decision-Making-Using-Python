@@ -1,5 +1,8 @@
 # 🏦 Bank Churn Customer Analysis: Customer Segmentation
 
+![image](https://github.com/user-attachments/assets/73943f63-3daa-4c7d-aacd-049011ede6df)
+
+
 ## 📌 Overview
 This project segments bank customers based on their financial and behavioral attributes to identify patterns and recommend personalized financial products or services. It employs **K-Means clustering** to group similar customers and derive actionable business insights.
 
@@ -7,23 +10,32 @@ This project segments bank customers based on their financial and behavioral att
 1. **Prepare the Data for Modeling**  
    - Select relevant fields and ensure numeric consistency.
    - Analyze distributions and engineer new features.
+     ![image](https://github.com/user-attachments/assets/71e7f58d-81fe-43be-9037-77369841c8c1)
+
    
 2. **Perform Customer Segmentation (Round 1)**  
    - Standardize the data.
    - Use K-Means clustering to identify customer groups.
    - Interpret cluster characteristics.
+     ![image](https://github.com/user-attachments/assets/54e654c7-67d9-429c-bcf5-cc4991e82b60)
+
 
 3. **Refine Customer Segmentation (Round 2)**  
    - Explore alternative feature selections.
    - Assess model performance using new subsets.
+     ![image](https://github.com/user-attachments/assets/539b0bec-c713-487b-ad0b-49d93fafb7d0)
+
 
 4. **Analyze Clusters & Provide Business Recommendations**  
    - Examine churn rates across clusters.
    - Tailor financial strategies for each segment.
+     ![image](https://github.com/user-attachments/assets/f852fde6-a219-4e80-b00d-132388135dad)
 
 ---
 
 ## 📊 Dataset
+![image](https://github.com/user-attachments/assets/293af4c1-51cd-459e-92b1-78bcc4b261f1)
+
 The dataset includes customer attributes such as:
 - `CreditScore`: Creditworthiness score.
 - `Geography`: Customer's country of residence.
@@ -39,7 +51,7 @@ The dataset includes customer attributes such as:
 
 ---
 
-## ⚙️ Methodology
+## ⚙️ Methodology [Click here To See Python NoteBook]()
 
 ### 📌 1. Data Preprocessing
 ✅ **Subset Selection:** Remove unnecessary fields (`CustomerId`, `Surname`, `Exited`).  
@@ -69,6 +81,8 @@ The dataset includes customer attributes such as:
 ---
 
 ## 📈 Results & Key Findings
+![image](https://github.com/user-attachments/assets/83357776-7339-4c76-abc6-ebafb3af4d60)
+
 
 ### 🔍 Identified Clusters
 1. **Cluster 0:** Customers who don't have a credit card.  
