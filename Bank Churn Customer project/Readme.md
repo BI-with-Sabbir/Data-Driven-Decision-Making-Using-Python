@@ -12,7 +12,7 @@ The dataset consists of customer information, including demographics, account de
 - **Tenure, Number of Products**: Customer relationship with the bank
 - **Exited**: Target variable (1 = Churned, 0 = Retained)
 
-##EDA and Maching learning Model Used this Project:[Click Here](http://localhost:8888/notebooks/Bank%20Churn%20Customer-%20Data%20Cleaning%2C%20EDA%20%26%20Classification.ipynb)
+## EDA and Maching learning Model Used this Project: **[Click Here]**(http://localhost:8888/notebooks/Bank%20Churn%20Customer-%20Data%20Cleaning%2C%20EDA%20%26%20Classification.ipynb)
 
 ## 🛠️ Data Cleaning & EDA
 - **Handling Missing Values**: Checked and imputed missing values
@@ -22,7 +22,9 @@ The dataset consists of customer information, including demographics, account de
   - Distribution of key variables
   - Churn rate across different demographics
   - Correlation analysis between features
-    ![image](https://github.com/user-attachments/assets/09312572-02df-4f95-9b6e-bd147ef833bf)
+
+![image](https://github.com/user-attachments/assets/bf928bd9-0864-4224-97f5-74da1c41aaea)
+
 
 
 ## 🔍 Machine Learning Models Used
@@ -37,10 +39,12 @@ Implemented classification models to predict customer churn:
   ![image](https://github.com/user-attachments/assets/6bcbabc5-6214-4013-92c0-6e85f626aa11)
 
 - Evaluated model performance using **accuracy, precision, recall, and F1-score**.
-![image](https://github.com/user-attachments/assets/613e0879-2872-476a-b9aa-4dbf6fb8aee0)
+![image](https://github.com/user-attachments/assets/22afc9f0-7550-4f9b-90e2-497f7642c047)
+
 
 - Provided actionable insights to reduce churn and retain customers.
-  ![image](https://github.com/user-attachments/assets/5e9bc094-f9f8-4d59-971f-79b0a6ce164a)
+![image](https://github.com/user-attachments/assets/c4df171b-3fa7-466d-a59d-ee5324abc15c)
+
 
 
 
