@@ -51,7 +51,7 @@ The dataset includes customer attributes such as:
 
 ---
 
-## ⚙️ Methodology [Click here To See Python NoteBook]()
+## ⚙️ Methodology [Click here To See Python NoteBook](https://github.com/BI-with-Sabbir/Data-Driven-Decision-Making-Using-Python/blob/main/Bank%20Customer%20Segmentation/Bank%20Customer%20Segmentation.pdf)
 
 ### 📌 1. Data Preprocessing
 ✅ **Subset Selection:** Remove unnecessary fields (`CustomerId`, `Surname`, `Exited`).  
