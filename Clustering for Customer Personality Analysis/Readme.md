@@ -23,7 +23,7 @@ This project focuses on segmenting customers based on their personality traits a
 
 ---
 
-## 📊 Dataset
+## 📊 Dataset [Click Here to Download](https://github.com/BI-with-Sabbir/Data-Driven-Decision-Making-Using-Python/blob/main/Clustering%20for%20Customer%20Personality%20Analysis/marketing_campaign.csv)
 The dataset contains customer attributes such as:
 - `ID`: Unique identifier for each customer.
 - `Age`: Customer's age.
@@ -35,7 +35,7 @@ The dataset contains customer attributes such as:
 
 ---
 
-## ⚙️ Methodology
+## ⚙️ Methodology [Click here to Download My python Notebook](https://github.com/BI-with-Sabbir/Data-Driven-Decision-Making-Using-Python/blob/main/Clustering%20for%20Customer%20Personality%20Analysis/Customer%20Personality%20Analysis%20using%20Clustering%20Algorithm.ipynb)
 
 ### 📌 1. Data Preprocessing
 ✅ **Feature Engineering:** Derived meaningful attributes.  
