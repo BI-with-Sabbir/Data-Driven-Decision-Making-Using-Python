@@ -2,7 +2,7 @@
 
 ## 📌 Overview
 This project focuses on segmenting customers based on their personality traits and purchasing behavior using **clustering techniques**. The goal is to identify distinct customer groups, analyze their characteristics, and provide insights that can drive personalized marketing strategies.
-![image](https://github.com/user-attachments/assets/e0590ad9-22f9-497a-a084-4aa1f634d182)
+
 
 
 ## 🎯 Objectives
@@ -51,10 +51,14 @@ The dataset contains customer attributes such as:
 ✅ **K-Means Clustering:** Applied Elbow Method for optimal clusters.  
 ✅ **Hierarchical Clustering:** Used for detailed segmentation insights.  
 
+![image](https://github.com/user-attachments/assets/b3ff4b1d-e48d-415c-8664-025b89dbe0e6)
+
+
 ### 📌 4. Business Insights & Decision-Making
 ✅ **Segmented Customers:** Identified high-value & budget-conscious segments.  
 ✅ **Marketing Strategies:** Personalized recommendations per cluster.  
 ✅ **Customer Retention Analysis:** Strategies for engagement improvement.  
+
 
 ---
 
@@ -64,7 +68,11 @@ The dataset contains customer attributes such as:
 1. **Cluster 0:** High-income customers with frequent purchases.  
 2. **Cluster 1:** Budget-conscious customers with high discount sensitivity.  
 3. **Cluster 2:** Young professionals with sporadic but high-value purchases.  
-4. **Cluster 3:** Low-spending customers with minimal engagement.  
+4. **Cluster 3:** Low-spending customers with minimal engagement.
+
+![image](https://github.com/user-attachments/assets/90e1e2e5-9162-4874-ad15-9f6e6e959aaf)
+
+   
 
 ### 🔥 Business Recommendations
 - **Cluster 0:** Offer premium loyalty programs & exclusive offers.  
