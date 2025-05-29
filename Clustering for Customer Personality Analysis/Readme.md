@@ -2,6 +2,8 @@
 
 ## 📌 Overview
 This project focuses on segmenting customers based on their personality traits and purchasing behavior using **clustering techniques**. The goal is to identify distinct customer groups, analyze their characteristics, and provide insights that can drive personalized marketing strategies.
+![image](https://github.com/user-attachments/assets/e0590ad9-22f9-497a-a084-4aa1f634d182)
+
 
 ## 🎯 Objectives
 1. **Data Preprocessing & Feature Engineering**  
