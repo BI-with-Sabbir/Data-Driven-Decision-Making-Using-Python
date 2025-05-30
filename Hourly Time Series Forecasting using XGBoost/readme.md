@@ -1,17 +1,18 @@
 # Hourly Time Series Forecasting using XGBoost
+![image](https://github.com/user-attachments/assets/2af89ef7-19ab-46a2-a6d1-45c778f9de55)
 
-![image](https://github.com/user-attachments/assets/1b5c65c7-3dc5-43e2-9d8b-c1309d07ef6a)
 
 
 ## 📌 Project Overview
 This project focuses on forecasting hourly energy consumption using XGBoost, a powerful gradient boosting algorithm. The dataset used comes from **PJM Interconnection LLC**, which operates an electric transmission system in the United States. The goal is to build an accurate time series model and extract valuable business insights from the predictions.
 
-![image](https://github.com/user-attachments/assets/2af89ef7-19ab-46a2-a6d1-45c778f9de55)
+![image](https://github.com/user-attachments/assets/1b5c65c7-3dc5-43e2-9d8b-c1309d07ef6a)
 
 
 ---
 
-## 📊 Dataset Overview
+## 📊 Dataset Overview [Click here to download dataset](https://github.com/BI-with-Sabbir/Data-Driven-Decision-Making-Using-Python/blob/main/Hourly%20Time%20Series%20Forecasting%20using%20XGBoost/AEP_hourly.csv)
+
 - **Source:** PJM Hourly Energy Consumption Data
 - **Time Period:** Covers multiple years with hourly electricity consumption data.
 - **Region:** Data collected from PJM’s service areas across several U.S. states.
@@ -32,7 +33,7 @@ The main objective is to develop a **time series forecasting model** using **XGB
 
 ---
 
-## 🛠 Step-by-Step Work Process
+## 🛠 Step-by-Step Work Process [Click here to Open Python Notebook](https://github.com/BI-with-Sabbir/Data-Driven-Decision-Making-Using-Python/blob/main/Hourly%20Time%20Series%20Forecasting%20using%20XGBoost/Time_Series_Forecasting_with_XGBoost.ipynb)
 ### 1️⃣ **Data Preprocessing & Feature Engineering**
 ✔ Loaded and cleaned the dataset.
 ✔ Created time-based features: Hour, Day of Week, Month, Year, etc.
