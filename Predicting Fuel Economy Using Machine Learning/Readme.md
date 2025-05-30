@@ -1,4 +1,5 @@
 # 🚗 Predicting Fuel Economy: Regression-Based Models
+![image](https://github.com/user-attachments/assets/9566f18e-5d59-4953-a914-573a8294c175)
 
 ## 📌 Overview
 This project builds regression models to predict a vehicle's fuel efficiency (`mpg`) based on automobile characteristics such as weight, model year, acceleration, and more. It employs **Multiple Linear Regression** and **Ridge Regression** to analyze relationships and optimize predictions.
@@ -22,7 +23,10 @@ This project builds regression models to predict a vehicle's fuel efficiency (`m
 
 ---
 
-## 📊 Dataset
+## 📊 Dataset [Click Here to See Dataset](https://github.com/BI-with-Sabbir/Data-Driven-Decision-Making-Using-Python/blob/main/Predicting%20Fuel%20Economy%20Using%20Machine%20Learning/auto-mpg.csv)
+
+![image](https://github.com/user-attachments/assets/c29dc169-b66e-4cca-8a74-fac26dbd0a7b)
+
 The dataset (`auto-mpg.csv`) includes the following features:
 - `mpg` (Target Variable)
 - `weight`, `model_year`, `acceleration` (Predictor Variables)
@@ -31,7 +35,7 @@ The dataset (`auto-mpg.csv`) includes the following features:
 
 ---
 
-## ⚙️ Methodology
+## ⚙️ Methodology [Click Here to see My Python Notebook](https://github.com/BI-with-Sabbir/Data-Driven-Decision-Making-Using-Python/blob/main/Predicting%20Fuel%20Economy%20Using%20Machine%20Learning/Predicting%20Fuel%20Economy.ipynb)
 
 ### 📌 1. Data Preprocessing
 ✅ **Missing Values Handling:** Identify and address missing or inconsistent values.  
@@ -57,11 +61,16 @@ The dataset (`auto-mpg.csv`) includes the following features:
 
 ## 📈 Results & Key Findings
 
+![image](https://github.com/user-attachments/assets/3fa3fd7a-a5a8-4b75-ba1b-97127b6fd24e)
+
 ### 🔍 Model Performance
 | Model               | Test R² | Test MAE |
 | ------------------- | ------- | -------- |
 | Linear Regression  | 0.852   | 11.71    |
 | Ridge Regression   | 0.818   | 9.372    |
+
+
+![image](https://github.com/user-attachments/assets/892ac6e6-b944-479d-b0c8-1c564c6265c1)
 
 ### 🔥 Key Insights
 - **Weight** is the most influential factor affecting fuel efficiency.
@@ -86,25 +95,5 @@ The dataset (`auto-mpg.csv`) includes the following features:
 
 ---
 
-## 📂 How to Use
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/Predicting-Fuel-Economy.git
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run the Jupyter Notebook or Python script:
-   ```bash
-   jupyter notebook Predicting_Fuel_Economy.ipynb
-   ```
-
----
-
-
----
-
-### 🎯 This project showcases my expertise in data analysis, regression modeling, and feature engineering, making me a strong candidate for data analyst roles! 🚀
 
 
