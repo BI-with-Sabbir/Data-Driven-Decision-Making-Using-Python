@@ -3,7 +3,7 @@
 ## 📌 Project Overview
 This project focuses on **data cleaning, exploratory data analysis (EDA), and machine learning classification** to predict customer churn for a bank. The goal is to analyze customer data, identify key patterns, and build predictive models to help the bank reduce churn and improve customer retention.
 
-## 📂 Dataset Description
+## 📂 Dataset Description [Click Here to see Dataset](https://github.com/BI-with-Sabbir/Data-Driven-Decision-Making-Using-Python/blob/main/Bank%20Churn%20Customer%20project/Bank_Churn.csv)
 The dataset consists of customer information, including demographics, account details, and transaction history. Key features include:
 - **Customer ID**: Unique identifier for each customer
 - **Age, Gender, Geography**: Demographic details
