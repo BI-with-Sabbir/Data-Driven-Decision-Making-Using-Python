@@ -4,12 +4,12 @@
 
 ## 🔗 Context Navigation
 
-* [Overview](#overview)
-* [Objectives](#objectives)
-* [Dataset](#dataset)
-* [Methodology](#⚙️-methodology)
-* [Results & Key Findings](#-results--key-findings)
-* [Technologies Used](#💪-technologies-used)
+* [📌 Overview](#-overview)
+* [🎯 Objectives](#-objectives)
+* [📊 Dataset](#-dataset)
+* [⚙️ Methodology](#️-methodology)
+* [📈 Results & Key Findings](#-results--key-findings)
+* [🛠️ Technologies Used](#-technologies-used)
 
 ---
 
@@ -19,7 +19,7 @@ This project segments bank customers based on their financial and behavioral att
 
 ---
 
-## 🌟 Objectives
+## 🎯 Objectives
 
 1. **Prepare the Data for Modeling**
 
@@ -54,23 +54,23 @@ This project segments bank customers based on their financial and behavioral att
 
 The dataset includes customer attributes such as:
 
-* `CreditScore`: Creditworthiness score.
-* `Geography`: Customer's country of residence.
-* `Gender`: Customer's gender (converted to numeric).
-* `Age`: Customer’s age.
-* `Tenure`: Years as a bank customer.
-* `Balance`: Account balance.
-* `NumOfProducts`: Number of products used.
-* `HasCrCard`: Whether the customer has a credit card.
-* `IsActiveMember`: Activity status.
-* `EstimatedSalary`: Estimated income.
-* `Exited`: Whether the customer left the bank (used for churn analysis).
+* `CreditScore`: Creditworthiness score
+* `Geography`: Customer's country of residence
+* `Gender`: Customer's gender (converted to numeric)
+* `Age`: Customer’s age
+* `Tenure`: Years as a bank customer
+* `Balance`: Account balance
+* `NumOfProducts`: Number of products used
+* `HasCrCard`: Whether the customer has a credit card
+* `IsActiveMember`: Activity status
+* `EstimatedSalary`: Estimated income
+* `Exited`: Whether the customer left the bank (used for churn analysis)
 
 ---
 
 ## ⚙️ Methodology
 
-[Click here To See Python NoteBook](https://github.com/BI-with-Sabbir/Data-Driven-Decision-Making-Using-Python/blob/main/Bank%20Customer%20Segmentation/Bank%20Customer%20Segmentation.pdf)
+[📄 Click here To See Python NoteBook](https://github.com/BI-with-Sabbir/Data-Driven-Decision-Making-Using-Python/blob/main/Bank%20Customer%20Segmentation/Bank%20Customer%20Segmentation.pdf)
 
 ### Steps to Building ML Model
 
@@ -79,13 +79,13 @@ The dataset includes customer attributes such as:
 * Exploring the Data
 * Feature Engineering
 * Scale the Data using Standardization
-* Fit K-Means Models with 2-15 Clusters
+* Fit K-Means Models with 2–15 Clusters
 * Plot the Inertia Values and Find the Elbow
 * Check the Number of Customers in each Cluster
 * Create a Heat Map of the Cluster Centers and Interpret the Clusters
 * Update the Model Dataset
 * Fit the Clustering Model with the Updated Data
-* Create a DataFrame that combines the data set, the "Exited" field, and cluster labels.
+* Create a DataFrame that combines the dataset, the "Exited" field, and cluster labels
 
 ### 📌 1. Data Preprocessing
 
@@ -139,7 +139,7 @@ The dataset includes customer attributes such as:
 
 ---
 
-## 💪 Technologies Used
+## 🛠️ Technologies Used
 
 * **Python** 🐍
 * **Pandas & NumPy** (Data Processing)
