@@ -4,24 +4,24 @@
 
 Click on a section to jump directly:
 
-* [📌 Project Overview](#project-overview)
-* [📂 Dataset Description](#dataset-description)
-* [🛠️ Steps of Machine Learning Model Building](#steps-of-machine-learning-model-building)
-* [🛠️ Data Cleaning & EDA](#data-cleaning--eda)
-* [🔍 Machine Learning Models Used](#machine-learning-models-used)
-* [📊 Results & Insights](#results--insights)
-* [📊 Key Insights for Decision-Making](#key-insights-for-decision-making)
-* [🚀 Future Improvements](#future-improvements)
+* [Project Overview](#project-overview)
+* [Dataset Description](#dataset-description)
+* [Steps of Machine Learning Model Building](#steps-of-machine-learning-model-building)
+* [Data Cleaning & EDA](#data-cleaning--eda)
+* [Machine Learning Models Used](#machine-learning-models-used)
+* [Results & Insights](#results--insights)
+* [Key Insights for Decision-Making](#key-insights-for-decision-making)
+* [Future Improvements](#future-improvements)
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 This project focuses on **data cleaning, exploratory data analysis (EDA), and machine learning classification** to predict customer churn for a bank. The goal is to analyze customer data, identify key patterns, and build predictive models to help the bank reduce churn and improve customer retention.
 
 ---
 
-## 📂 Dataset Description
+## Dataset Description
 
 [Click Here to see Dataset](https://github.com/BI-with-Sabbir/Data-Driven-Decision-Making-Using-Python/blob/main/Bank%20Churn%20Customer%20project/Bank_Churn.csv)
 
@@ -36,7 +36,7 @@ The dataset consists of customer information, including demographics, account de
 
 ---
 
-## 🛠️ Steps of Machine Learning Model Building
+## Steps of Machine Learning Model Building
 
 [Click Here to View Full Process](https://github.com/BI-with-Sabbir/Data-Driven-Decision-Making-Using-Python/blob/main/Bank%20Churn%20Customer%20project/Bank%20Churn%20Customer-%20Data%20Cleaning%2C%20EDA%20%26%20Classification.pdf)
 
@@ -50,7 +50,7 @@ The dataset consists of customer information, including demographics, account de
 
 ---
 
-## 🛠️ Data Cleaning & EDA
+## Data Cleaning & EDA
 
 * **Handling Missing Values**: Checked and imputed missing values
 * **Duplicate Removal**: Eliminated redundant records
@@ -65,7 +65,7 @@ The dataset consists of customer information, including demographics, account de
 
 ---
 
-## 🔍 Machine Learning Models Used
+## Machine Learning Models Used
 
 Implemented classification models to predict customer churn:
 
@@ -75,7 +75,7 @@ Implemented classification models to predict customer churn:
 
 ---
 
-## 📊 Results & Insights
+## Results & Insights
 
 * Identified key factors influencing churn, such as credit score, tenure, and balance.
   ![Churn Factors](https://github.com/user-attachments/assets/6bcbabc5-6214-4013-92c0-6e85f626aa11)
@@ -88,7 +88,7 @@ Implemented classification models to predict customer churn:
 
 ---
 
-## 📊 Key Insights for Decision-Making
+## Key Insights for Decision-Making
 
 Based on the analysis, the following insights are valuable for stakeholders:
 
@@ -104,7 +104,7 @@ Based on the analysis, the following insights are valuable for stakeholders:
 
 ---
 
-## 🚀 Future Improvements
+## Future Improvements
 
 * Implement **Customer Segmentation (Unsupervised Learning)** using clustering techniques.
 * Test **Deep Learning Models** (e.g., Neural Networks) for better prediction accuracy.
