@@ -1,4 +1,6 @@
 ## Bank Churn Customer Analysis
+<img width="420" height="127" alt="image" src="https://github.com/user-attachments/assets/9449f1b9-f421-44df-b343-cfd569710b41" />
+
 
 ### 🔗 Context Navigation
 
