@@ -1,4 +1,8 @@
-# 🏦 Bank Churn Customer Analysis: Customer Segmentation
+# 🏦 Bank Churn Customer Analysis: Customer Segmentation  
+<img width="442" height="120" alt="Untitled Diagram drawio (2)" src="https://github.com/user-attachments/assets/bdb5a566-df94-4851-a159-87d342bbf730" />
+
+
+
 
 ![image](https://github.com/user-attachments/assets/73943f63-3daa-4c7d-aacd-049011ede6df)
 
