@@ -6,7 +6,7 @@ Click on a section to jump directly:
 
 * [📌 Project Overview](#project-overview)
 * [📂 Dataset Description](#dataset-description)
-* [🛠️ Steps of Machine learning Model Bulding](#steps-of-machine-learning-model-bulding)
+* [🛠️ Steps of Machine Learning Model Building](#steps-of-machine-learning-model-building)
 * [🛠️ Data Cleaning & EDA](#data-cleaning--eda)
 * [🔍 Machine Learning Models Used](#machine-learning-models-used)
 * [📊 Results & Insights](#results--insights)
@@ -36,17 +36,17 @@ The dataset consists of customer information, including demographics, account de
 
 ---
 
-## 🛠️ Steps of Machine learning Model Bulding
+## 🛠️ Steps of Machine Learning Model Building
 
 [Click Here to View Full Process](https://github.com/BI-with-Sabbir/Data-Driven-Decision-Making-Using-Python/blob/main/Bank%20Churn%20Customer%20project/Bank%20Churn%20Customer-%20Data%20Cleaning%2C%20EDA%20%26%20Classification.pdf)
 
-* Data cleaning.
+* Data cleaning
 * Exploring the data
-* Preparing the Data for Modelling
-* Checking Multicollinearity of the Data
-* More Feature Engineering & Train-Test Split
-* Build & Evaluate a Logistic Regression Model
-* Fit & Tune a Random Forest Model
+* Preparing the data for modelling
+* Checking multicollinearity of the data
+* More feature engineering & train-test split
+* Build & evaluate a Logistic Regression model
+* Fit & tune a Random Forest model
 
 ---
 
@@ -92,7 +92,7 @@ Implemented classification models to predict customer churn:
 
 Based on the analysis, the following insights are valuable for stakeholders:
 
-📌 **High Churn Rate among Younger Customers**: Customers aged 18-30 have a significantly higher churn rate. The bank should introduce loyalty programs for younger customers.
+📌 **High Churn Rate among Younger Customers**: Customers aged 18–30 have a significantly higher churn rate. The bank should introduce loyalty programs for younger customers.
 
 📌 **Geographic Influence on Churn**: Customers from certain regions (e.g., Germany) show a higher churn rate. The bank should investigate region-specific policies or offers.
 
