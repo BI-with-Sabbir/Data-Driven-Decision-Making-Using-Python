@@ -1,19 +1,16 @@
 # Hourly Time Series Forecasting using XGBoost
 
-## 📌 Context Navigation
+## 📌 Table of Contents
 
-Click on a section to jump directly:
-
-* [📌 Project Overview](#project-overview)
-* [📊 Dataset Overview](#dataset-overview)
-* [🎯 Project Goal](#project-goal)
-* [🛠 Step-by-Step Work Process](#step-by-step-work-process)
-* [📈 Output Analysis](#output-analysis)
-* [🔍 Business Impact & Insights](#business-impact--insights)
-* [🚀 Future Implementation](#future-implementation)
-* [✅ Benefits of the Project](#benefits-of-the-project)
-* [📂 Repository Structure](#repository-structure)
-* [💡 Conclusion](#conclusion)
+* [Project Overview](#project-overview)
+* [Dataset Overview](#dataset-overview)
+* [Project Goal](#project-goal)
+* [Step-by-Step Work Process](#step-by-step-work-process)
+* [Output Analysis](#output-analysis)
+* [Business Impact & Insights](#business-impact--insights)
+* [Future Implementation](#future-implementation)
+* [Repository Structure](#repository-structure)
+* [Conclusion](#conclusion)
 
 ---
 
@@ -21,7 +18,7 @@ Click on a section to jump directly:
 
 This project focuses on forecasting hourly energy consumption using XGBoost, a powerful gradient boosting algorithm. The dataset used comes from **PJM Interconnection LLC**, which operates an electric transmission system in the United States. The goal is to build an accurate time series model and extract valuable business insights from the predictions.
 
-![Overview Image](https://github.com/user-attachments/assets/1b5c65c7-3dc5-43e2-9d8b-c1309d07ef6a)
+![Energy Forecasting](https://github.com/user-attachments/assets/1b5c65c7-3dc5-43e2-9d8b-c1309d07ef6a)
 
 ---
 
@@ -35,7 +32,7 @@ This project focuses on forecasting hourly energy consumption using XGBoost, a p
 * **Target Variable:** Power consumption in megawatts (MW).
 * **Features:** Timestamp, Hour, Day, Month, Year, and other time-related features.
 
-![Dataset Image](https://github.com/user-attachments/assets/1459f90c-1a0c-4473-8e9a-1207a3abb73f)
+![Dataset Overview](https://github.com/user-attachments/assets/1459f90c-1a0c-4473-8e9a-1207a3abb73f)
 
 ---
 
@@ -61,7 +58,7 @@ The main objective is to develop a **time series forecasting model** using **XGB
 * Split the dataset into training (before 2015) and testing (after 2015).
 * Handled missing values and ensured data consistency.
 
-![Feature Engineering](https://github.com/user-attachments/assets/7ae1ccb0-8e7a-4de4-a4e6-f7588d30c9e5)
+![Data Cleaning](https://github.com/user-attachments/assets/7ae1ccb0-8e7a-4de4-a4e6-f7588d30c9e5)
 
 ### 2. Modeling with XGBoost
 
@@ -70,7 +67,7 @@ The main objective is to develop a **time series forecasting model** using **XGB
 * Evaluated feature importance (Day of Year, Hour, and Year most significant).
 * Generated predictions for unseen data.
 
-![XGBoost Model](https://github.com/user-attachments/assets/a529c352-b0a9-4b93-825c-9ec8a2d2c2e8)
+![Modeling](https://github.com/user-attachments/assets/a529c352-b0a9-4b93-825c-9ec8a2d2c2e8)
 
 ### 3. Performance Evaluation
 
@@ -81,65 +78,56 @@ The main objective is to develop a **time series forecasting model** using **XGB
 
 ### 4. Insights from Forecast Errors
 
-* Model struggles with holidays (July 4th, Christmas, etc.).
+* Model struggles with holidays (e.g., July 4th, Christmas).
 * Over-forecasting on special days with abnormal consumption patterns.
 * Need for additional external factors like weather data.
 
-![Forecast Errors](https://github.com/user-attachments/assets/7d9501f8-7d05-4d07-b1c1-315e9d6044ed)
+![Forecast Error](https://github.com/user-attachments/assets/7d9501f8-7d05-4d07-b1c1-315e9d6044ed)
 
 ---
 
 ## 📈 Output Analysis
 
 * The model effectively captures trends but faces challenges with special events.
-* Feature importance analysis shows that **day of year, hour, and year** play the biggest roles in energy demand.
-* Predicted values align with real-world consumption trends but require enhancements.
+* Feature importance shows Day of Year, Hour, and Year as key influencers.
+* Predictions align with real-world trends, though refinement is needed.
 
-![Output](https://github.com/user-attachments/assets/4c55dc9d-26b0-43d7-95d7-22be5179e6ea)
+![Prediction Accuracy](https://github.com/user-attachments/assets/4c55dc9d-26b0-43d7-95d7-22be5179e6ea)
 
 ---
 
 ## 🔍 Business Impact & Insights
 
-* **Improved Energy Planning:** Forecasting helps optimize power distribution.
-* **Cost Reduction:** Predicting demand fluctuations can prevent overproduction.
-* **Grid Stability:** Identifying peak hours prevents outages and improves efficiency.
-* **Strategic Decision-Making:** Insights help policymakers manage energy supply.
+* **Improved Energy Planning:** Forecasting aids power distribution.
+* **Cost Reduction:** Prevents overproduction with demand prediction.
+* **Grid Stability:** Helps avoid outages and improves efficiency.
+* **Strategic Decision-Making:** Enables smarter energy supply planning.
 
 ---
 
 ## 🚀 Future Implementation
 
-* Add Lag Variables: Introduce past consumption data as new features.
-* Holiday Indicators: Improve accuracy for special event days.
-* Weather Data Integration: Consider temperature and humidity impact.
-* Hyperparameter Tuning: Optimize XGBoost parameters for better performance.
-
----
-
-## ✅ Benefits of the Project
-
-* Enhances forecasting accuracy for power grid operators.
-* Supports smart energy consumption and cost management.
-* Can be expanded to other industries like finance and retail.
-* Provides a scalable model for real-world deployment.
+* Add **Lag Variables** for capturing time-based trends.
+* Integrate **Holiday Indicators** for abnormal consumption behavior.
+* Include **Weather Data** to improve accuracy.
+* Apply **Hyperparameter Tuning** for optimized model performance.
 
 ---
 
 ## 📂 Repository Structure
 
 ```
-project-folder
-┣ data/                 # Raw and processed datasets
-┣ notebooks/            # Jupyter notebooks for analysis
-┣ models/               # Trained models and saved outputs
-┣ README.md             # Project documentation
-┣ requirements.txt      # Dependencies list
-┗ main.py               # Main script to run the model
+📁 project-folder
+ ┣ 📂 data               # Raw and processed datasets
+ ┣ 📂 notebooks          # Jupyter notebooks
+ ┣ 📂 models             # Trained model files
+ ┣ 📜 README.md          # Project documentation
+ ┣ 📜 requirements.txt   # List of dependencies
+ ┗ 📜 main.py            # Main script
 ```
 
 ---
 
 ## 💡 Conclusion
 
-This project demonstrates how **XGBoost** can be used for **time series forecasting** in the energy sector. With further enhancements, the model can be a valuable tool for **energy demand prediction, cost reduction, and smart grid management**.
+This project demonstrates how **XGBoost** can be used for **time series forecasting** in the energy sector. With further enhancement, the model can assist in energy demand prediction, cost savings, and smart grid optimization.
