@@ -64,6 +64,9 @@ The dataset (`auto-mpg.csv`) includes the following features:
 * ✅ Feature Engineering
 * ✅ Visualization with histograms and heatmaps
 
+<img width="615" height="498" alt="image" src="https://github.com/user-attachments/assets/6130bcc8-9905-4ef0-8dc4-fd6dd5555b1d" />
+
+
 ### 📌 2. Multiple Linear Regression
 
 * ✅ Feature Selection
@@ -75,6 +78,9 @@ The dataset (`auto-mpg.csv`) includes the following features:
 * ✅ Performance Metrics (R², MAE)
 * ✅ Residual Diagnostics (Q-Q plots, scatterplots)
 * ✅ Polynomial Features
+
+<img width="854" height="547" alt="image" src="https://github.com/user-attachments/assets/45738e38-da85-455a-b51e-360d178438f8" />
+
 
 ### 📌 4. Ridge Regression & Model Comparison
 
