@@ -6,16 +6,16 @@
 
 ## 📖 Table of Contents
 
-* [📌 Project Overview](#project-overview)
-* [📊 Dataset Overview](#dataset-overview)
-* [🎯 Project Goal](#project-goal)
-* [🛠 Step-by-Step Work Process](#step-by-step-work-process)
-* [📈 Output Analysis](#output-analysis)
-* [🔍 Business Impact & Insights](#business-impact--insights)
-* [🚀 Future Implementation](#future-implementation)
-* [✅ Benefits of the Project](#benefits-of-the-project)
-* [📂 Repository Structure](#repository-structure)
-* [💡 Conclusion](#conclusion)
+* [📌 Project Overview](#-project-overview)
+* [📊 Dataset Overview](#-dataset-overview)
+* [🎯 Project Goal](#-project-goal)
+* [🛠 Step-by-Step Work Process](#-step-by-step-work-process)
+* [📈 Output Analysis](#-output-analysis)
+* [🔍 Business Impact & Insights](#-business-impact--insights)
+* [🚀 Future Implementation](#-future-implementation)
+* [✅ Benefits of the Project](#-benefits-of-the-project)
+* [📂 Repository Structure](#-repository-structure)
+* [💡 Conclusion](#-conclusion)
 
 ---
 
