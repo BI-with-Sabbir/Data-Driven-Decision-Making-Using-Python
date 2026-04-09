@@ -313,9 +313,7 @@ The small performance gap indicates that model choice alone is not the primary d
 **Key takeaway:**  
 Significant improvements were achieved only after refining forecasting strategies (rolling forecasts) and applying proper feature engineering, particularly for XGBoost.
 
-**Key takeaway:**  
-Feature engineering (momentum/lag variables) is critical for improving Prophet performance, as traditional seasonal components have limited predictive value in financial time series.
-<img width="878" height="1478" alt="image" src="https://github.com/user-attachments/assets/805c400f-aee3-4e80-b7da-6cfd95af2b4e" />
+
 
 
 ### Key Findings
