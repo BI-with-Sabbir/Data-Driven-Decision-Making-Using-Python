@@ -211,7 +211,7 @@ The model underestimates volatility and trend acceleration, indicating limitatio
 **Key takeaway:**  
 Standard ARIMA is not suitable for long-horizon stock forecasting without adaptive updating strategies such as rolling forecasts.
 
-6. ARIMA Walk-Forward Forecast
+# 6. ARIMA Walk-Forward Forecast
 <img width="1390" height="560" alt="image" src="https://github.com/user-attachments/assets/0ef61689-73ed-4a96-93ce-cd7f7f728e3d" />
 
 **What the chart shows:**  
@@ -223,7 +223,7 @@ Unlike static forecasting, the walk-forward approach updates the model continuou
 **Key takeaway:**  
 ARIMA performs significantly better when applied in a rolling forecasting framework, making it a strong baseline for short-term stock prediction.
 
-7. XGBoost Forecast (Raw Price)
+# 7. XGBoost Forecast (Raw Price)
 
 <img width="1391" height="560" alt="image" src="https://github.com/user-attachments/assets/bdb1c864-ad50-441d-a9fe-ea4af306550f" />
 
@@ -239,7 +239,7 @@ Predicting raw prices with machine learning is ineffective; transforming the pro
 **Key takeaway:**  
 The series is trend-dominated with weak seasonality and high noise, making it more suitable for adaptive, short-term forecasting models rather than static seasonal approaches.
 
-8. XGBoost Forecast (Corrected with Daily Updates)
+# 8. XGBoost Forecast (Corrected with Daily Updates)
 <img width="1391" height="560" alt="image" src="https://github.com/user-attachments/assets/63e19bc2-aa1d-498e-919d-41512afbfdb5" />
 
 **What the chart shows:**  
@@ -250,7 +250,7 @@ By avoiding long-horizon recursive forecasting and using updated real values at 
 **Key takeaway:**  
 Adaptive, one-step forecasting combined with proper feature engineering enables XGBoost to outperform traditional statistical models for stock prediction.
 
-9. XGBoost 7-Day Future Forecast
+# 9. XGBoost 7-Day Future Forecast
 
 <img width="960" height="507" alt="image" src="https://github.com/user-attachments/assets/9d17e416-05e3-4a49-8257-a0618d9e1eb1" />
 
@@ -263,7 +263,7 @@ This suggests a short-term correction following recent strong upward momentum, w
 **Key takeaway:**  
 The forecast indicates a mild bearish trend in the short term, highlighting the importance of adaptive forecasting for short-horizon decision-making.
 
-10. Prophet Forecast
+# 10. Prophet Forecast
 
 <img width="1390" height="560" alt="image" src="https://github.com/user-attachments/assets/6861a767-9ade-4470-b81d-0d809cbb715e" />
 
@@ -276,7 +276,7 @@ Although Prophet performs well in identifying long-term trends, it struggles to 
 **Key takeaway:**  
 Prophet is better suited for trend-focused forecasting but requires additional features (e.g., lag variables) to improve performance in dynamic stock market environments.
 
-11. Final Prophet Forecast (Corrected with Momentum)
+# 11. Final Prophet Forecast (Corrected with Momentum)
 
 <img width="1390" height="560" alt="image" src="https://github.com/user-attachments/assets/80406af1-3008-4be0-8474-c94f29696b66" />
 
@@ -291,10 +291,8 @@ While the model becomes more responsive to recent changes, it also introduces hi
 Enhancing Prophet improves directional accuracy but increases noise, making it less stable compared to rolling statistical models or machine learning approaches.
 ### Prophet Components Analysis
 
-12. ### Prophet Components Analysis
+#12. Prophet Components Analysis
     <img width="878" height="1478" alt="image" src="https://github.com/user-attachments/assets/93fd1ab1-b503-4324-96a8-023dbe01bc9e" />
-
-
 
 **What the chart shows:**  
 The Prophet model decomposes the time series into trend, seasonal, holiday, and extra regressor components.
@@ -302,7 +300,7 @@ The Prophet model decomposes the time series into trend, seasonal, holiday, and 
 **Why it matters:**  
 The trend and momentum (extra regressor) dominate the model, while seasonal and holiday effects are minimal, indicating that stock prices are driven more by recent movements than by periodic patterns.
 
-13. ### Model Performance Comparison (MAE)
+#13. Model Performance Comparison (MAE)
 
 <img width="948" height="507" alt="image" src="https://github.com/user-attachments/assets/ee319fd3-0771-4658-a40b-b3a0407074c7" />
 
