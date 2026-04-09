@@ -1,6 +1,8 @@
 # 🏷️ Time Series Forecasting of Stock Prices: ARIMA vs Prophet vs XGBoost
 
-![banner](https://via.placeholder.com/1200x400.png?text=Time+Series+Forecasting+Project)
+<img width="1024" height="1024" alt="Wt_l3ZbVhmYpeEwNZdrKG" src="https://github.com/user-attachments/assets/7188fdf9-19d2-4888-835b-828334076f0b" />
+<img width="1024" height="1024" alt="Wt_l3ZbVhmYpeEwNZdrKG" src="https://github.com/user-attachments/assets/7188fdf9-19d2-4888-835b-828334076f0b" />
+
 
 ---
 
@@ -148,6 +150,49 @@ Models were compared using:
 ---
 
 ## 📈 Output Analysis
+# 1.Google Stoke price analysis last 10 years 
+<img width="1395" height="588" alt="image" src="https://github.com/user-attachments/assets/0951e8a7-6bdc-4cc5-bb25-27125a0a3090" />
+<img width="1395" height="588" alt="image" src="https://github.com/user-attachments/assets/0951e8a7-6bdc-4cc5-bb25-27125a0a3090" />
+
+*interpret:
+The 10-year GOOGL stock price shows a strong upward trend with increasing volatility over time. The series is clearly non-stationary, making direct long-horizon forecasting challenging. Structural changes, including rapid growth phases and market corrections, indicate that the underlying data-generating process evolves over time.
+
+This behavior highlights the importance of:
+- transforming the data (e.g., differencing or returns),
+- using rolling forecasting strategies,
+- and applying models capable of capturing nonlinear patterns.
+
+Overall, the data suggests that short-term adaptive models are more suitable than static long-horizon approaches.
+
+# 2. Moving Averages (SMA vs EMA)
+<img width="1366" height="560" alt="image" src="https://github.com/user-attachments/assets/b7deee1d-2329-4201-b4fd-ac228d84fc4c" />
+<img width="1366" height="560" alt="image" src="https://github.com/user-attachments/assets/b7deee1d-2329-4201-b4fd-ac228d84fc4c" />
+
+### Interprtation 
+
+![SMA vs EMA](outputs/figures/03_sma_ema.png)
+
+**What the chart shows:**  
+This plot compares the original stock price with 50-day Simple Moving Average (SMA) and Exponential Moving Average (EMA). Both indicators smooth the series and highlight the underlying trend.
+
+**Why it matters:**  
+EMA reacts faster to recent price changes, while SMA provides a more stable long-term trend. The lag in SMA during rapid price movements highlights its limitation in capturing short-term dynamics.
+
+**Key takeaway:**  
+The strong alignment of moving averages with the upward trend confirms market momentum, while the increasing deviation between price and averages suggests rising volatility—making adaptive forecasting models more suitable.
+
+# 3. ### Exponential Smoothing (Holt Linear Trend)
+
+![Holt Trend](outputs/figures/04_holt_trend.png)
+
+**What the chart shows:**  
+This plot compares actual stock prices with Holt’s Linear Trend, which applies exponential smoothing to capture the underlying trend.
+
+**Why it matters:**  
+The model closely follows the general upward movement while filtering out short-term noise. However, it lags during rapid price changes, indicating limited responsiveness to sudden market shifts.
+
+**Key takeaway:**  
+Stock prices are strongly trend-driven, but simple trend-based models are not sufficient for accurate forecasting due to high volatility and dynamic market behavior.
 
 ### Key Findings
 
