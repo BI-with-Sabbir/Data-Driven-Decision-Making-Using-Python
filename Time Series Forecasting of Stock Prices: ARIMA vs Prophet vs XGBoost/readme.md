@@ -1,7 +1,7 @@
 # 🏷️ Time Series Forecasting of Stock Prices: ARIMA vs Prophet vs XGBoost
 
 <img width="1024" height="1024" alt="Wt_l3ZbVhmYpeEwNZdrKG" src="https://github.com/user-attachments/assets/7188fdf9-19d2-4888-835b-828334076f0b" />
-<img width="1024" height="1024" alt="Wt_l3ZbVhmYpeEwNZdrKG" src="https://github.com/user-attachments/assets/7188fdf9-19d2-4888-835b-828334076f0b" />
+
 
 
 ---
@@ -152,7 +152,7 @@ Models were compared using:
 ## 📈 Output Analysis
 # 1.Google Stoke price analysis last 10 years 
 <img width="1395" height="588" alt="image" src="https://github.com/user-attachments/assets/0951e8a7-6bdc-4cc5-bb25-27125a0a3090" />
-<img width="1395" height="588" alt="image" src="https://github.com/user-attachments/assets/0951e8a7-6bdc-4cc5-bb25-27125a0a3090" />
+
 
 *interpret:
 The 10-year GOOGL stock price shows a strong upward trend with increasing volatility over time. The series is clearly non-stationary, making direct long-horizon forecasting challenging. Structural changes, including rapid growth phases and market corrections, indicate that the underlying data-generating process evolves over time.
@@ -166,7 +166,7 @@ Overall, the data suggests that short-term adaptive models are more suitable tha
 
 # 2. Moving Averages (SMA vs EMA)
 <img width="1366" height="560" alt="image" src="https://github.com/user-attachments/assets/b7deee1d-2329-4201-b4fd-ac228d84fc4c" />
-<img width="1366" height="560" alt="image" src="https://github.com/user-attachments/assets/b7deee1d-2329-4201-b4fd-ac228d84fc4c" />
+
 
 ### Interprtation 
 
@@ -183,7 +183,9 @@ The strong alignment of moving averages with the upward trend confirms market mo
 
 # 3. ### Exponential Smoothing (Holt Linear Trend)
 
-![Holt Trend](outputs/figures/04_holt_trend.png)
+<img width="1404" height="560" alt="image" src="https://github.com/user-attachments/assets/f4ef484a-84e7-49e8-b7dc-bd709c3f2163" />
+
+
 
 **What the chart shows:**  
 This plot compares actual stock prices with Holt’s Linear Trend, which applies exponential smoothing to capture the underlying trend.
@@ -193,6 +195,143 @@ The model closely follows the general upward movement while filtering out short-
 
 **Key takeaway:**  
 Stock prices are strongly trend-driven, but simple trend-based models are not sufficient for accurate forecasting due to high volatility and dynamic market behavior.
+
+# 4. ### Time Series Decomposition
+
+<img width="1477" height="949" alt="image" src="https://github.com/user-attachments/assets/28df172f-68d2-453f-97c4-f9bd1e74c3eb" />
+
+
+**What the chart shows:**  
+The decomposition splits the stock price into trend, seasonal, and residual components. The trend shows strong long-term growth with a temporary decline around 2022–2023, followed by rapid acceleration.
+
+**Why it matters:**  
+The seasonal component is relatively weak, indicating that stock prices do not follow strong periodic patterns. The residual component shows increasing volatility over time, reflecting market uncertainty and external influences.
+
+# 5. ARIMA Forecast vs Actual
+<img width="1366" height="560" alt="image" src="https://github.com/user-attachments/assets/61a6aa27-c920-4b9f-96da-2fd52651bd47" />
+### ARIMA Forecast vs Actual
+
+![ARIMA Forecast](outputs/figures/07_arima_baseline.png)
+
+**What the chart shows:**  
+The ARIMA model produces a relatively smooth forecast that fails to capture the sharp fluctuations and rapid growth observed in the actual stock price.
+
+**Why it matters:**  
+The model underestimates volatility and trend acceleration, indicating limitations in handling non-stationary and highly dynamic financial time series.
+
+**Key takeaway:**  
+Standard ARIMA is not suitable for long-horizon stock forecasting without adaptive updating strategies such as rolling forecasts.
+
+6. ### ARIMA Walk-Forward Forecast
+<img width="1390" height="560" alt="image" src="https://github.com/user-attachments/assets/0ef61689-73ed-4a96-93ce-cd7f7f728e3d" />
+
+**What the chart shows:**  
+The ARIMA rolling forecast closely follows the actual stock price, capturing both short-term fluctuations and overall trend.
+
+**Why it matters:**  
+Unlike static forecasting, the walk-forward approach updates the model continuously, allowing it to adapt to new data and changing market conditions.
+
+**Key takeaway:**  
+ARIMA performs significantly better when applied in a rolling forecasting framework, making it a strong baseline for short-term stock prediction.
+
+7. ### XGBoost Forecast (Raw Price)
+
+<img width="1391" height="560" alt="image" src="https://github.com/user-attachments/assets/bdb1c864-ad50-441d-a9fe-ea4af306550f" />
+
+**What the chart shows:**  
+The XGBoost model captures short-term fluctuations but fails to follow the strong upward trend in the stock price.
+
+**Why it matters:**  
+Tree-based models like XGBoost are not well-suited for extrapolating beyond the range of training data when predicting non-stationary time series such as raw stock prices.
+
+**Key takeaway:**  
+Predicting raw prices with machine learning is ineffective; transforming the problem (e.g., predicting returns) is essential for improved performance.
+
+**Key takeaway:**  
+The series is trend-dominated with weak seasonality and high noise, making it more suitable for adaptive, short-term forecasting models rather than static seasonal approaches.
+
+8. ### XGBoost Forecast (Corrected with Daily Updates)
+<img width="1391" height="560" alt="image" src="https://github.com/user-attachments/assets/63e19bc2-aa1d-498e-919d-41512afbfdb5" />
+
+**What the chart shows:**  
+The corrected XGBoost model closely tracks the actual stock price using a one-step-ahead prediction strategy with daily updates.
+
+**Why it matters:**  
+By avoiding long-horizon recursive forecasting and using updated real values at each step, the model eliminates error accumulation and captures both trend and short-term fluctuations effectively.
+**Key takeaway:**  
+Adaptive, one-step forecasting combined with proper feature engineering enables XGBoost to outperform traditional statistical models for stock prediction.
+
+9. ### XGBoost 7-Day Future Forecast
+
+<img width="960" height="507" alt="image" src="https://github.com/user-attachments/assets/9d17e416-05e3-4a49-8257-a0618d9e1eb1" />
+
+**What the chart shows:**  
+The model predicts a gradual decline in stock price over the next 7 days, starting from approximately 307.16.
+
+**Why it matters:**  
+This suggests a short-term correction following recent strong upward momentum, which is common in financial markets after rapid price increases.
+
+**Key takeaway:**  
+The forecast indicates a mild bearish trend in the short term, highlighting the importance of adaptive forecasting for short-horizon decision-making.
+
+10. ### Prophet Forecast
+
+<img width="1390" height="560" alt="image" src="https://github.com/user-attachments/assets/6861a767-9ade-4470-b81d-0d809cbb715e" />
+
+**What the chart shows:**  
+The Prophet model captures the overall upward trend in stock prices while smoothing out short-term fluctuations.
+
+**Why it matters:**  
+Although Prophet performs well in identifying long-term trends, it struggles to respond to sudden market movements and high volatility, which are common in financial time series.
+
+**Key takeaway:**  
+Prophet is better suited for trend-focused forecasting but requires additional features (e.g., lag variables) to improve performance in dynamic stock market environments.
+
+11. ### Final Prophet Forecast (Corrected with Momentum)
+
+<img width="1390" height="560" alt="image" src="https://github.com/user-attachments/assets/80406af1-3008-4be0-8474-c94f29696b66" />
+
+
+**What the chart shows:**  
+The improved Prophet model incorporates momentum (lag features) and better follows the actual stock price trend.
+
+**Why it matters:**  
+While the model becomes more responsive to recent changes, it also introduces higher variability and occasional overreaction to fluctuations.
+
+**Key takeaway:**  
+Enhancing Prophet improves directional accuracy but increases noise, making it less stable compared to rolling statistical models or machine learning approaches.
+### Prophet Components Analysis
+
+12. ### Prophet Components Analysis
+    <img width="878" height="1478" alt="image" src="https://github.com/user-attachments/assets/93fd1ab1-b503-4324-96a8-023dbe01bc9e" />
+
+
+
+**What the chart shows:**  
+The Prophet model decomposes the time series into trend, seasonal, holiday, and extra regressor components.
+
+**Why it matters:**  
+The trend and momentum (extra regressor) dominate the model, while seasonal and holiday effects are minimal, indicating that stock prices are driven more by recent movements than by periodic patterns.
+
+13. ### Model Performance Comparison (MAE)
+
+<img width="948" height="507" alt="image" src="https://github.com/user-attachments/assets/ee319fd3-0771-4658-a40b-b3a0407074c7" />
+
+
+
+**What the chart shows:**  
+The baseline comparison of ARIMA, Prophet, and XGBoost using MAE shows similar performance across all models, with Prophet and XGBoost slightly outperforming ARIMA.
+
+**Why it matters:**  
+The small performance gap indicates that model choice alone is not the primary driver of forecasting accuracy.
+
+**Key takeaway:**  
+Significant improvements were achieved only after refining forecasting strategies (rolling forecasts) and applying proper feature engineering, particularly for XGBoost.
+
+**Key takeaway:**  
+Feature engineering (momentum/lag variables) is critical for improving Prophet performance, as traditional seasonal components have limited predictive value in financial time series.
+<img width="878" height="1478" alt="image" src="https://github.com/user-attachments/assets/805c400f-aee3-4e80-b7da-6cfd95af2b4e" />
+
 
 ### Key Findings
 
@@ -232,28 +371,3 @@ Stock prices are strongly trend-driven, but simple trend-based models are not su
 
 ---
 
-## 📂 Repository Structure
-
-```bash
-📁 time-series-forecasting-arima-prophet-xgboost
- ┣ 📂 data
- ┃ ┣ 📂 raw
- ┃ ┗ 📂 processed
- ┣ 📂 notebooks
- ┃ ┗ 📜 Time_Series_Forecasting_ARIMA_vs_Prophet_vs_XGBoost.ipynb
- ┣ 📂 outputs
- ┃ ┣ 📂 figures
- ┃ ┣ 📂 metrics
- ┃ ┗ 📂 forecasts
- ┣ 📂 src
- ┃ ┣ 📜 data_loader.py
- ┃ ┣ 📜 preprocessing.py
- ┃ ┣ 📜 arima_model.py
- ┃ ┣ 📜 prophet_model.py
- ┃ ┣ 📜 xgboost_model.py
- ┃ ┣ 📜 evaluation.py
- ┃ ┗ 📜 utils.py
- ┣ 📜 README.md
- ┣ 📜 requirements.txt
- ┣ 📜 .gitignore
- ┗ 📜 LICENSE
