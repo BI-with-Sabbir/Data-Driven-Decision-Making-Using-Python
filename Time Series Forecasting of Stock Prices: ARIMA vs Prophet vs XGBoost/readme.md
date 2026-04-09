@@ -289,9 +289,9 @@ While the model becomes more responsive to recent changes, it also introduces hi
 
 **Key takeaway:**  
 Enhancing Prophet improves directional accuracy but increases noise, making it less stable compared to rolling statistical models or machine learning approaches.
-### Prophet Components Analysis
 
-#12. Prophet Components Analysis
+
+# 12. Prophet Components Analysis
     <img width="878" height="1478" alt="image" src="https://github.com/user-attachments/assets/93fd1ab1-b503-4324-96a8-023dbe01bc9e" />
 
 **What the chart shows:**  
