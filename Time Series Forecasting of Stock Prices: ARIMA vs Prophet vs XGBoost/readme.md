@@ -154,7 +154,6 @@ Models were compared using:
 <img width="1395" height="588" alt="image" src="https://github.com/user-attachments/assets/0951e8a7-6bdc-4cc5-bb25-27125a0a3090" />
 
 
-*interpret:
 The 10-year GOOGL stock price shows a strong upward trend with increasing volatility over time. The series is clearly non-stationary, making direct long-horizon forecasting challenging. Structural changes, including rapid growth phases and market corrections, indicate that the underlying data-generating process evolves over time.
 
 This behavior highlights the importance of:
@@ -168,10 +167,6 @@ Overall, the data suggests that short-term adaptive models are more suitable tha
 <img width="1366" height="560" alt="image" src="https://github.com/user-attachments/assets/b7deee1d-2329-4201-b4fd-ac228d84fc4c" />
 
 
-### Interprtation 
-
-![SMA vs EMA](outputs/figures/03_sma_ema.png)
-
 **What the chart shows:**  
 This plot compares the original stock price with 50-day Simple Moving Average (SMA) and Exponential Moving Average (EMA). Both indicators smooth the series and highlight the underlying trend.
 
@@ -181,11 +176,9 @@ EMA reacts faster to recent price changes, while SMA provides a more stable long
 **Key takeaway:**  
 The strong alignment of moving averages with the upward trend confirms market momentum, while the increasing deviation between price and averages suggests rising volatility—making adaptive forecasting models more suitable.
 
-# 3. ### Exponential Smoothing (Holt Linear Trend)
+# 3. Exponential Smoothing (Holt Linear Trend)
 
 <img width="1404" height="560" alt="image" src="https://github.com/user-attachments/assets/f4ef484a-84e7-49e8-b7dc-bd709c3f2163" />
-
-
 
 **What the chart shows:**  
 This plot compares actual stock prices with Holt’s Linear Trend, which applies exponential smoothing to capture the underlying trend.
@@ -196,10 +189,9 @@ The model closely follows the general upward movement while filtering out short-
 **Key takeaway:**  
 Stock prices are strongly trend-driven, but simple trend-based models are not sufficient for accurate forecasting due to high volatility and dynamic market behavior.
 
-# 4. ### Time Series Decomposition
+# 4.Time Series Decomposition
 
 <img width="1477" height="949" alt="image" src="https://github.com/user-attachments/assets/28df172f-68d2-453f-97c4-f9bd1e74c3eb" />
-
 
 **What the chart shows:**  
 The decomposition splits the stock price into trend, seasonal, and residual components. The trend shows strong long-term growth with a temporary decline around 2022–2023, followed by rapid acceleration.
@@ -211,8 +203,6 @@ The seasonal component is relatively weak, indicating that stock prices do not f
 <img width="1366" height="560" alt="image" src="https://github.com/user-attachments/assets/61a6aa27-c920-4b9f-96da-2fd52651bd47" />
 ### ARIMA Forecast vs Actual
 
-![ARIMA Forecast](outputs/figures/07_arima_baseline.png)
-
 **What the chart shows:**  
 The ARIMA model produces a relatively smooth forecast that fails to capture the sharp fluctuations and rapid growth observed in the actual stock price.
 
@@ -222,7 +212,7 @@ The model underestimates volatility and trend acceleration, indicating limitatio
 **Key takeaway:**  
 Standard ARIMA is not suitable for long-horizon stock forecasting without adaptive updating strategies such as rolling forecasts.
 
-6. ### ARIMA Walk-Forward Forecast
+6. ARIMA Walk-Forward Forecast
 <img width="1390" height="560" alt="image" src="https://github.com/user-attachments/assets/0ef61689-73ed-4a96-93ce-cd7f7f728e3d" />
 
 **What the chart shows:**  
@@ -234,7 +224,7 @@ Unlike static forecasting, the walk-forward approach updates the model continuou
 **Key takeaway:**  
 ARIMA performs significantly better when applied in a rolling forecasting framework, making it a strong baseline for short-term stock prediction.
 
-7. ### XGBoost Forecast (Raw Price)
+7. XGBoost Forecast (Raw Price)
 
 <img width="1391" height="560" alt="image" src="https://github.com/user-attachments/assets/bdb1c864-ad50-441d-a9fe-ea4af306550f" />
 
@@ -250,7 +240,7 @@ Predicting raw prices with machine learning is ineffective; transforming the pro
 **Key takeaway:**  
 The series is trend-dominated with weak seasonality and high noise, making it more suitable for adaptive, short-term forecasting models rather than static seasonal approaches.
 
-8. ### XGBoost Forecast (Corrected with Daily Updates)
+8. XGBoost Forecast (Corrected with Daily Updates)
 <img width="1391" height="560" alt="image" src="https://github.com/user-attachments/assets/63e19bc2-aa1d-498e-919d-41512afbfdb5" />
 
 **What the chart shows:**  
@@ -261,7 +251,7 @@ By avoiding long-horizon recursive forecasting and using updated real values at 
 **Key takeaway:**  
 Adaptive, one-step forecasting combined with proper feature engineering enables XGBoost to outperform traditional statistical models for stock prediction.
 
-9. ### XGBoost 7-Day Future Forecast
+9. XGBoost 7-Day Future Forecast
 
 <img width="960" height="507" alt="image" src="https://github.com/user-attachments/assets/9d17e416-05e3-4a49-8257-a0618d9e1eb1" />
 
@@ -274,7 +264,7 @@ This suggests a short-term correction following recent strong upward momentum, w
 **Key takeaway:**  
 The forecast indicates a mild bearish trend in the short term, highlighting the importance of adaptive forecasting for short-horizon decision-making.
 
-10. ### Prophet Forecast
+10. Prophet Forecast
 
 <img width="1390" height="560" alt="image" src="https://github.com/user-attachments/assets/6861a767-9ade-4470-b81d-0d809cbb715e" />
 
@@ -287,7 +277,7 @@ Although Prophet performs well in identifying long-term trends, it struggles to 
 **Key takeaway:**  
 Prophet is better suited for trend-focused forecasting but requires additional features (e.g., lag variables) to improve performance in dynamic stock market environments.
 
-11. ### Final Prophet Forecast (Corrected with Momentum)
+11. Final Prophet Forecast (Corrected with Momentum)
 
 <img width="1390" height="560" alt="image" src="https://github.com/user-attachments/assets/80406af1-3008-4be0-8474-c94f29696b66" />
 
@@ -316,8 +306,6 @@ The trend and momentum (extra regressor) dominate the model, while seasonal and 
 13. ### Model Performance Comparison (MAE)
 
 <img width="948" height="507" alt="image" src="https://github.com/user-attachments/assets/ee319fd3-0771-4658-a40b-b3a0407074c7" />
-
-
 
 **What the chart shows:**  
 The baseline comparison of ARIMA, Prophet, and XGBoost using MAE shows similar performance across all models, with Prophet and XGBoost slightly outperforming ARIMA.
