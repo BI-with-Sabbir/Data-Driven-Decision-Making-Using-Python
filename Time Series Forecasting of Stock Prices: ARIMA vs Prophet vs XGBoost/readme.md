@@ -201,7 +201,6 @@ The seasonal component is relatively weak, indicating that stock prices do not f
 
 # 5. ARIMA Forecast vs Actual
 <img width="1366" height="560" alt="image" src="https://github.com/user-attachments/assets/61a6aa27-c920-4b9f-96da-2fd52651bd47" />
-### ARIMA Forecast vs Actual
 
 **What the chart shows:**  
 The ARIMA model produces a relatively smooth forecast that fails to capture the sharp fluctuations and rapid growth observed in the actual stock price.
